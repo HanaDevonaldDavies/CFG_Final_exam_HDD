@@ -1,0 +1,38 @@
+ Theory Questions
+
+1. The deque module is part of which python library?
+'Collections'
+
+2. What are 2 differences that distinguish a tree from a graph?
+A tree is a type of graph that has only one path between any two nodes. This means that there aren't any loops and there is only one root node. Whereas a graph can be made up of multiple nodes/ various groups of nodes. Graphs can have multiple paths between nodes and may contain loops. As well as this, a tree has only 'n-1' edges due to the fact that each edge can only connect 2 nodes, therefore there is always one less edge than the number of nodes in a tree. While graphs can have an unlimited number of edges depending on whether the graph is directed or undirected.
+
+3. Give definitions of time complexity and space complexity.
+The time complexity of a programme informs us how long the algorithm takes to complete, depending on the size of the imput. This allows the developers to gage the speed of the algorithm if the input increases. Whereas the space complexity of an algorithm informs the developers of how much memory the algorithm uses while its running. The space complexity helps to predict how much memory the algorithm will need as the input increases.
+
+4. Describe the bubble sort algorithm and its complexity. What is guaranteed at the end of the first pass?
+The Bubble Sort algorithm is a sorting method that repeatedly reads through a list, compares each pair and swaps them if they appear in the wrong order. This process continues until the entire list is sorted correctly.
+The space complexity of a bubble sort algorithm does not use any extra memory as it only sorts the inputs already given. The time complexity depends on how well the list is sorted initially. If the list isn't sorted well it may take a few passes and elements will need to be compared a few times.
+At the end of the first pass through the list, the largest element is guarenteed to have been moved to its correct position at the end of the list. Therefore the final element is in the last sorted position.
+
+5. Explain what LIFO and FIFO are and how each works in practice with a named data structure.
+LIFO (Last in, First Out) is a principle where the last element is the first element to be removed
+In a stack data structure, pushing adds an element at the top of the stack and popping removes the element from the top of the stack.
+Both push and pop operations are performed at the top position, therefore following the LIFO principle.
+FIFO (First in, First out) means that the first element added is also the first to be removed. Within a queue data structure, Enqueue adds an element to the end of a queue
+and dequeue removes the element from the front of the queue. This means the queue maintains 2 pointers, both at the front and back of the queue. This means that the follows the FIFO order.
+
+6. What is a balanced binary tree and what would be the best root? Walkthrough how you search using this structure.
+A balanced binary tree is a type of binary tree where the height of the subtrees of any node differ by a maximum of 1. This allows an efficient balance, where all operations can run efficiently.
+In a balanced binary tree, the root is typically chosen to be the median of the sorted elements to ensure that the tree is balanced. This ensures that each subtree has approximately the same number of nodes, therefore ensuring balanced search tmes and efficinecy.
+
+Searching in a balanced binary tree;
+
+1. Start the search at the root node of the tree
+2. Compare the target value:
+- If the target value is equal to the value of the current node, the search is successflu and the nodes returned.
+- If the target value is less than the value of the current node, move to the left subtree
+- If the target value is more that the value of the current node, move to the right subtree
+3. Continue process recursively, moving down the appropriate subtree based on the comparison until you find the target value
+4. Check for termination 
+- If leaf node is reached and value is not found, this means that the target value is not included in the balanced binary tree
+- If the target value is found, ensure search is returned as successful.
